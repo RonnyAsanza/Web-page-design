@@ -1,0 +1,246 @@
+
+/* COMUNES */
+body {
+    padding-top: 5em;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.info{
+    position: relative;
+    background: rgb(75, 76, 17);
+    padding: 60px 0;
+    z-index: 0;
+}
+/* MARGIN */
+.mr-1{
+    margin-right: 1em;
+}
+
+.mt-1em{
+    margin-bottom: auto;
+}
+
+.my-15{
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+/* */
+
+/* HEADER */
+
+.txt-deco-none{
+    text-decoration:none
+}
+
+/* TEXTO */
+
+.tjustify{
+    text-align: justify;
+}
+.bold {
+    font-weight: 900;
+}
+.f-txt-gotham{
+    font-family: 'Gotham', sans-serif;
+}
+.f-size-075{
+    font-size: 0.75em;
+}
+.fs-8{
+    font-size: 8em;
+}
+.pad-header{
+    padding-top: 1em;
+    padding-right: 4em !important;
+    letter-spacing: 0.2em;
+}
+.pad-205em{
+    padding-top: 2.5em;
+}
+
+/* COLOR */
+
+.bg-black{
+    background-color: black;
+}
+.c-white{
+    color: black;
+}
+
+/* SVG */
+
+.facebook-icon svg{
+    color: blue;
+    width: 5em;
+    height: 3em;
+}
+.instagram-icon svg {
+    fill: #833ab4; 
+    width: 5em;
+    height: 3em;
+}
+.github-icon svg {
+    fill: #090909; 
+    width: 5em;
+    height: 3em;
+}
+
+/*  */
+
+.footer-phone{
+    padding: 0.25em;
+    border: 0.1em solid rgb(9, 9, 9);
+    outline: 0.1em solid blue;
+    color: rgb(186, 19, 19);
+}
+
+
+/* HOVER */
+.hover-yellow:hover {
+    color: rgb(177, 180, 45);
+    transition: 1s;
+}
+
+.hover-bd1 {
+    position: relative;
+}
+.hover-bd1:hover::before {
+    content: "";
+    position: absolute;
+    left: 2.5em;
+    bottom: 0;
+    width: 82%;
+    height: 0.4em;
+    background-color: rgb(177, 180, 45);
+    animation: slide-in 0.3s ease-out;
+}
+
+.nav-link {
+    position: relative;
+}
+.nav-link:hover::before {
+    content: "";
+    position: absolute;
+    left: 0.75em;
+    bottom: 0;
+    width: 50%;
+    height: 0.4em;
+    background-color: rgb(177, 180, 45);
+    animation: slide-in 0.3s ease-out;
+}
+
+/* ANIMATION */
+@keyframes slide-in {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+}
+
+/* RESPONSIVE @MEDIA */
+
+@media (max-width: 365px) { /* Dispositivos pequeños */
+    .container-fluid{
+        padding-right: 0.1em;
+    }
+    .fs-8 {
+        font-size: 5em;
+    }
+      .nav-link:hover::before{
+          width: 15%;
+          height: 0.5em;
+    }
+      .hover-bd1:hover::before {
+          width: 70%;
+          height: 0.5em;
+    }
+      .mt-1em{
+        margin-bottom: 2em;
+        margin-top: 1em;
+    }
+      .my-15{
+          margin-left: 0.5em;
+          margin-right: 0.5em;
+    }
+}
+
+@media (min-width:366px) and (max-width: 576px)  { /* Dispositivos pequeños */
+    .fs-8 {
+      font-size: 5em;
+    }
+    .nav-link:hover::before{
+        width: 10%;
+        height: 0.5em;
+    }
+    .hover-bd1:hover::before {
+        width: 70%;
+        height: 0.5em;
+    }
+    .mt-1em{
+        margin-bottom: 2em;
+        margin-top: 1em;
+    }
+    .my-15{
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+  
+@media (min-width: 577px) and (max-width: 768px) { /* Dispositivos medianos */
+    .fs-8 {
+      font-size: 5em;
+    }
+    .nav-link:hover::before{
+        width: 7%;
+        height: 0.5em;
+    }
+    .mt-1em{
+        margin-bottom: 2em;
+        margin-top: 1em;
+    }
+    .my-15{
+        margin-left: 0.75em;
+        margin-right: 0.75em;
+    }
+
+}
+  
+@media (min-width: 769px) and (max-width: 992px) { /* Dispositivos grandes */
+    .fs-8 {
+      font-size: 6em;
+    }
+    .nav-link:hover::before{
+        width: 5%;
+        height: 0.5em;
+    }
+    .mt-1em{
+        margin-top: 1em;
+    }
+    .my-15{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+  
+@media (min-width: 993px) and  (max-width: 1199px){ /* Dispositivos extra grandes */
+    .fs-8 {
+      font-size: 7em;
+    }
+    .my-15{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+@media (min-width: 1200px) { /* Dispositivos extra extra grandes */
+
+}
