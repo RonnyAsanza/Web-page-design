@@ -1,4 +1,5 @@
-/* COMUNES */
+/*################## COMUNES ##################*/
+
 body {
     padding-top: 5em;
 }
@@ -10,7 +11,7 @@ body {
     text-align: center;
 }
 
-/* MARGIN */
+/*################## MARGIN ##################*/
 .mr-1{
     margin-right: 1em;
 }
@@ -24,15 +25,37 @@ body {
     margin-right: 5em;
 }
 
-/* */
-
-/* HEADER */
+/*##################  ##################*/
+.row-custom {
+    position: relative;
+}
+.row-custom::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(146, 147, 98); /* Cambiar el valor de hexadecimal para modificar el color */
+    height: 12em; /* Cambiar el valor para modificar la altura del fondo */
+    width: 100%; /* Cambiar el valor para modificar la anchura del fondo */
+    z-index: -1;
+}
+.row-custom .col-6 {
+    margin-top: 50px; /* Establecer un margen superior para evitar que se superpongan con el fondo */
+}
+.rotate-3s-stop-5s {
+    animation: fall 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1;
+  }
+.stop {
+    animation: none;
+    animation-delay: 5s;
+}
+  
+/*################## TEXTO ##################*/
 
 .txt-deco-none{
     text-decoration:none
 }
-
-/* TEXTO */
 
 .tjustify{
     text-align: justify;
@@ -49,16 +72,8 @@ body {
 .fs-8{
     font-size: 8em;
 }
-.pad-header{
-    padding-top: 1em;
-    padding-right: 4em !important;
-    letter-spacing: 0.2em;
-}
-.pad-205em{
-    padding-top: 2.5em;
-}
 
-/* COLOR */
+/*################## COLOR ##################*/
 
 .bg-black{
     background-color: black;
@@ -67,7 +82,7 @@ body {
     color: black;
 }
 
-/* SVG */
+/*################## SVG ##################*/
 
 .facebook-icon svg{
     color: blue;
@@ -85,7 +100,7 @@ body {
     height: 3em;
 }
 
-/*  */
+/*################## PADDING ##################*/
 
 .footer-phone{
     padding: 0.25em;
@@ -93,9 +108,16 @@ body {
     outline: 0.1em solid blue;
     color: rgb(186, 19, 19);
 }
+.pad-header{
+    padding-top: 1em;
+    padding-right: 4em !important;
+    letter-spacing: 0.2em;
+}
+.pad-205em{
+    padding-top: 2.5em;
+}
 
-
-/* HOVER */
+/*################## HOVER ##################*/
 .hover-yellow:hover {
     color: rgb(177, 180, 45);
     transition: 1s;
@@ -131,7 +153,7 @@ body {
 
 
 
-/* ANIMATION */
+/*################## ANIMATION ##################*/
 @keyframes slide-in {
     from {
       transform: scaleX(0);
@@ -141,7 +163,26 @@ body {
     }
 }
 
-/* RESPONSIVE @MEDIA */
+@keyframes fall {
+    0% {
+      transform: translateY(-200px);
+      opacity: 0;
+    }
+    40% {
+      transform: translateY(20px);
+      opacity: 1;
+    }
+    80% {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+/*################## RESPONSIVE ##################*/
 
 @media (max-width: 365px) { /* Dispositivos pequeños */
     .container-fluid{
