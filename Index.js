@@ -1,3 +1,4 @@
+
 /* ROTAR IMAGEN BODY */
 const rotatingImage = document.getElementById("rotating-image");
 
@@ -18,3 +19,4 @@ setInterval(function() {
     rotateImage();
   }, 5000);
 }, 10000);
+

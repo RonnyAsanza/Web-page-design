@@ -10,6 +10,13 @@ body {
     align-items: center;
     text-align: center;
 }
+/*################## BODY ##################*/
+
+.txt-nav-body{
+    text-decoration:none;
+    text-align: center;
+    font-size: 1.25em;
+}
 
 /*################## MARGIN ##################*/
 .mr-1{
